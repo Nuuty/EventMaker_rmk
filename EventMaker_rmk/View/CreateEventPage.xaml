@@ -1,0 +1,28 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventMaker_rmk.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:EventMaker_rmk.ViewModel"
+    x:Class="EventMaker_rmk.View.CreateEventPage"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <ViewModel:EventViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="486,160,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_eventname" HorizontalAlignment="Left" Margin="350,165,0,0" TextWrapping="Wrap" Text="MyEvent" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="486,240,0,0" TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_eventdescription" HorizontalAlignment="Left" Margin="350,245,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="486,315,0,0" TextWrapping="Wrap" Text="{Binding Place, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_eventplace" HorizontalAlignment="Left" Margin="352,320,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="485,400,0,0" VerticalAlignment="Top" Date="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="textBox_eventdate" HorizontalAlignment="Left" Margin="349,398,0,0" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" RenderTransformOrigin="0.562,2.719"/>
+        <TextBox x:Name="textBox_eventtime" HorizontalAlignment="Left" Margin="350,483,0,0" TextWrapping="Wrap" Text="Tid" VerticalAlignment="Top" RenderTransformOrigin="0.562,2.719"/>
+        <TimePicker HorizontalAlignment="Left" Margin="488,483,0,0" VerticalAlignment="Top" Time="{Binding Time, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+    </Grid>
+</Page>

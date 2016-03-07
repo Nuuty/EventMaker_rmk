@@ -11,7 +11,7 @@ namespace EventMaker_rmk.Model
     {
         private static readonly EventCatalogSingleton _instance = new EventCatalogSingleton();
         
-        public ObservableCollection<Event> EventListe { get; set; }
+        public ObservableCollection<MyEvent> EventListe { get; set; }
         public static EventCatalogSingleton Instance
         {
             get
@@ -21,18 +21,18 @@ namespace EventMaker_rmk.Model
         }
         public EventCatalogSingleton()
         {
-            EventListe = new ObservableCollection<Event>()
+            EventListe = new ObservableCollection<MyEvent>()
             {
-                new Event("Event1","description1","place1",new DateTime(2016,07,03,14,30,00)),
-                new Event("Event2", "description2", "place2", new DateTime(2016, 07, 03, 14, 30, 00)),
-                new Event("Event3", "description3", "place3", new DateTime(2016, 07, 03, 14, 30, 00))
+                new MyEvent("Event1","description1","place1",new DateTime(2016,07,03,14,30,00)),
+                new MyEvent("Event2", "description2", "place2", new DateTime(2016, 07, 03, 14, 30, 00)),
+                new MyEvent("Event3", "description3", "place3", new DateTime(2016, 07, 03, 14, 30, 00))
             }
             ;
         }
 
-        public void AddEvent(Event EventAdd)
+        public void AddEvent(MyEvent myEventAdd)
         {
-            EventListe.Add(EventAdd);
+            EventListe.Add(myEventAdd);
         }
     }
 }
