@@ -8,9 +8,7 @@
     x:Class="EventMaker_rmk.View.CreateEventPage"
     mc:Ignorable="d">
 
-    <Page.DataContext>
-        <ViewModel:EventViewModel/>
-    </Page.DataContext>
+   
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="486,160,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>

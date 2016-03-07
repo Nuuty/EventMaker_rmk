@@ -25,7 +25,7 @@ namespace EventMaker_rmk.Handler
         {
             var date = DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EventVM.Date, EventVM.Time);
             EventVM.Catalog.AddEvent(new MyEvent(EventVM.Name,EventVM.Description,EventVM.Place,date));
-            ((Frame)Window.Current.Content).Navigate(typeof(View.CreateEventPage));
+            ((Frame)Window.Current.Content).Navigate(typeof(View.EventPage));
         }
     }
 }

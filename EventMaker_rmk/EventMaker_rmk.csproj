@@ -98,6 +98,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Converter\DateTimeConverter.cs" />
     <Compile Include="Handler\EventHandler.cs" />
     <Compile Include="Model\MyEvent.cs" />
@@ -106,6 +107,9 @@
     <Compile Include="ViewModel\EventViewModel.cs" />
     <Compile Include="View\CreateEventPage.xaml.cs">
       <DependentUpon>CreateEventPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EventPage.xaml.cs">
+      <DependentUpon>EventPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
